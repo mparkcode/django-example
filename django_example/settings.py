@@ -27,9 +27,9 @@ if os.path.exists('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['mpark-django-example.herokuapp.com']
+ALLOWED_HOSTS = ['mpark-django-example.herokuapp.com', 'localhost']
 
 
 # Application definition
